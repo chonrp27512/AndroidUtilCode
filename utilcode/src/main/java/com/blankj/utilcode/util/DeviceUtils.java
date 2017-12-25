@@ -56,7 +56,12 @@ public final class DeviceUtils {
 
 
     /**
+     * 优点：
+     * 更具体地说，Settings.Secure.ANDROID_ID 是一串64位的编码（十六进制的字符串），是随机生成的设备的第一个引导，其记录着一个固定值，通过它可以知道设备的寿命（在设备恢复出厂设置后，该值可能会改变）。 ANDROID_ID也可视为作为唯一设备标识号的一个好选择。如要检索用于设备ID 的ANDROID_ID，请参阅下面的示例代码
+     * 缺点
      * 获取设备AndroidID
+     * 对于Android 2.2（“Froyo”）之前的设备不是100％的可靠
+     • 此外，在主流制造商的畅销手机中至少存在一个众所周知的错误，每一个实例都具有相同的ANDROID_ID。
      *
      * @return AndroidID
      */
